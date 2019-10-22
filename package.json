@@ -1,0 +1,27 @@
+{
+  "name": "pact-cdc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:consumer": "./node_modules/.bin/mocha --timeout 10000 ./consumer/tests/consumer.spec.js",
+    "test:pact:consumer": "./node_modules/.bin/mocha --timeout 10000 ./consumer/tests/consumerPact.spec.js",
+    "test:pact:provider": "./node_modules/.bin/mocha --timeout 10000 ./provider/tests/providerPact.spec.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "superagent": "^5.1.0"
+  },
+  "devDependencies": {
+    "@pact-foundation/pact": "^9.2.1",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^6.2.2",
+    "nock": "^11.5.0"
+  }
+}

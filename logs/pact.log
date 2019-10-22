@@ -1,0 +1,85 @@
+I, [2019-10-22T10:36:04.421058 #9264]  INFO -- : Registered expected interaction POST /checkout
+D, [2019-10-22T10:36:04.421058 #9264] DEBUG -- : {
+  "description": "a request for total amount",
+  "request": {
+    "method": "POST",
+    "path": "/checkout",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "items": [
+        {
+          "description": "Antique typewriter",
+          "price": 49,
+          "quantity": 1
+        },
+        {
+          "description": "Christmas decorations",
+          "price": 15,
+          "quantity": 5
+        },
+        {
+          "description": "Notepad",
+          "price": 16.25,
+          "quantity": 2
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "totalAmount": 156.5
+    }
+  }
+}
+I, [2019-10-22T10:36:04.431032 #9264]  INFO -- : Received request POST /checkout
+D, [2019-10-22T10:36:04.432029 #9264] DEBUG -- : {
+  "path": "/checkout",
+  "query": "",
+  "method": "post",
+  "body": {
+    "items": [
+      {
+        "description": "Antique typewriter",
+        "price": 49,
+        "quantity": 1
+      },
+      {
+        "description": "Christmas decorations",
+        "price": 15,
+        "quantity": 5
+      },
+      {
+        "description": "Notepad",
+        "price": 16.25,
+        "quantity": 2
+      }
+    ]
+  },
+  "headers": {
+    "Content-Length": "189",
+    "Content-Type": "application/json",
+    "Host": "localhost:3000",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2019-10-22T10:36:04.432029 #9264]  INFO -- : Found matching response for POST /checkout
+D, [2019-10-22T10:36:04.432029 #9264] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "totalAmount": 156.5
+  }
+}
+I, [2019-10-22T10:36:04.448026 #9264]  INFO -- : Verifying - interactions matched
+I, [2019-10-22T10:36:04.466936 #9264]  INFO -- : Cleared interactions
+I, [2019-10-22T10:36:04.486907 #9264]  INFO -- : Writing pact for My provider to C:/Users/387950/Projetos/pact-noob/pacts/my_consumer-my_provider.json

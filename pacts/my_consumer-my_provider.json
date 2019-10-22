@@ -1,0 +1,53 @@
+{
+  "consumer": {
+    "name": "My consumer"
+  },
+  "provider": {
+    "name": "My provider"
+  },
+  "interactions": [
+    {
+      "description": "a request for total amount",
+      "request": {
+        "method": "POST",
+        "path": "/checkout",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "items": [
+            {
+              "description": "Antique typewriter",
+              "price": 49,
+              "quantity": 1
+            },
+            {
+              "description": "Christmas decorations",
+              "price": 15,
+              "quantity": 5
+            },
+            {
+              "description": "Notepad",
+              "price": 16.25,
+              "quantity": 2
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "totalAmount": 156.5
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
