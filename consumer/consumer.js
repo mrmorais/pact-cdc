@@ -11,8 +11,12 @@ const checkoutOrder = items => {
             items
         })
         .then( res => {
+            const {totalAmount, maxDescount} = res.body;
+            const descount = maxDescount <= 0.15 ? maxDescount : 0.15;
             return {
-                totalAmount: res.body.totalAmount
+                totalAmount,
+                descount: 0.15,
+                withDescountAmount: (1 - descount) * totalAmount
             };
         })
 };

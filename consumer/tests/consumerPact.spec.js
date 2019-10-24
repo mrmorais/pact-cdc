@@ -44,16 +44,18 @@ describe('Consumer Pact', () => {
                             'Content-type': 'application/json; charset=utf-8',
                         },
                         body: {
-                            totalAmount: 156.5
+                            totalAmount: 156.5,
+                            maxDescount: 0.2
                         }
                     }
                 });
             });
 
-            it('can process the JSON payload from provider', () => {
-                const response = checkoutOrder(items);
+            it('can process the JSON payload from provider', (done) => {
+                const processedOrder = checkoutOrder(items);
 
-                return expect(response).to.eventually.have.property('totalAmount', 156.5)
+                expect(processedOrder).to.eventually.have.property('totalAmount', 156.5);
+                expect(processedOrder).to.eventually.have.property('withDescountAmount', 133.025).notify(done);
             });
 
             it('should validate and create a contract', () => {

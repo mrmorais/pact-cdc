@@ -40,7 +40,8 @@
           "Content-type": "application/json; charset=utf-8"
         },
         "body": {
-          "totalAmount": 156.5
+          "totalAmount": 156.5,
+          "maxDescount": 0.2
         }
       }
     }

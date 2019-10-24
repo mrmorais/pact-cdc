@@ -1,5 +1,5 @@
-I, [2019-10-22T10:36:04.421058 #9264]  INFO -- : Registered expected interaction POST /checkout
-D, [2019-10-22T10:36:04.421058 #9264] DEBUG -- : {
+I, [2019-10-24T08:41:13.347694 #584]  INFO -- : Registered expected interaction POST /checkout
+D, [2019-10-24T08:41:13.347694 #584] DEBUG -- : {
   "description": "a request for total amount",
   "request": {
     "method": "POST",
@@ -33,12 +33,13 @@ D, [2019-10-22T10:36:04.421058 #9264] DEBUG -- : {
       "Content-type": "application/json; charset=utf-8"
     },
     "body": {
-      "totalAmount": 156.5
+      "totalAmount": 156.5,
+      "maxDescount": 0.2
     }
   }
 }
-I, [2019-10-22T10:36:04.431032 #9264]  INFO -- : Received request POST /checkout
-D, [2019-10-22T10:36:04.432029 #9264] DEBUG -- : {
+I, [2019-10-24T08:41:13.378977 #584]  INFO -- : Received request POST /checkout
+D, [2019-10-24T08:41:13.378977 #584] DEBUG -- : {
   "path": "/checkout",
   "query": "",
   "method": "post",
@@ -70,16 +71,17 @@ D, [2019-10-22T10:36:04.432029 #9264] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2019-10-22T10:36:04.432029 #9264]  INFO -- : Found matching response for POST /checkout
-D, [2019-10-22T10:36:04.432029 #9264] DEBUG -- : {
+I, [2019-10-24T08:41:13.378977 #584]  INFO -- : Found matching response for POST /checkout
+D, [2019-10-24T08:41:13.378977 #584] DEBUG -- : {
   "status": 200,
   "headers": {
     "Content-type": "application/json; charset=utf-8"
   },
   "body": {
-    "totalAmount": 156.5
+    "totalAmount": 156.5,
+    "maxDescount": 0.2
   }
 }
-I, [2019-10-22T10:36:04.448026 #9264]  INFO -- : Verifying - interactions matched
-I, [2019-10-22T10:36:04.466936 #9264]  INFO -- : Cleared interactions
-I, [2019-10-22T10:36:04.486907 #9264]  INFO -- : Writing pact for My provider to C:/Users/387950/Projetos/pact-noob/pacts/my_consumer-my_provider.json
+I, [2019-10-24T08:41:13.394599 #584]  INFO -- : Verifying - interactions matched
+I, [2019-10-24T08:41:13.410194 #584]  INFO -- : Cleared interactions
+I, [2019-10-24T08:41:13.425770 #584]  INFO -- : Writing pact for My provider to C:/Users/387950/Projetos/pact-noob/pacts/my_consumer-my_provider.json

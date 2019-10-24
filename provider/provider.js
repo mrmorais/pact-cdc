@@ -18,9 +18,10 @@ server.post('/checkout', (req, res) => {
     const total = items.reduce((sum, currentItem) => 
         sum + (currentItem.price * currentItem.quantity)
     , 0);
-
+    
     res.json({
-        totalAmount: total
+        totalAmount: total,
+        maxDescount: 0.2
     });
 })
 
