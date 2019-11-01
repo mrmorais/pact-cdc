@@ -9,6 +9,8 @@ const {server} = require('../provider');
 chai.use(chaiAsPromised);
 
 describe('Provider test', () => {
+    console.log(process.env)
+    
     let serverConn;
     before(() => {
         serverConn = server.listen(3000, () => {
