@@ -20,7 +20,7 @@ server.post('/checkout', (req, res) => {
     , 0);
     
     res.json({
-        totalAmount: total + 15,
+        totalAmount: total,
         maxDescount: 0.2
     });
 })
