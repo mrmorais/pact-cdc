@@ -5,7 +5,6 @@ const chaiAsPromised = require('chai-as-promised');
 const Verifier = require('@pact-foundation/pact').Verifier;
 
 const {server} = require('../provider');
-const { pactBrokerUrl, pactBrokerToken } = require('../../pactFlow_credentials');
 
 chai.use(chaiAsPromised);
 
@@ -21,8 +20,8 @@ describe('Provider test', () => {
             return new Verifier().verifyProvider({
                 provider: 'My provider',
                 providerBaseUrl: 'http://localhost:3000',
-                pactBrokerUrl,
-                pactBrokerToken
+                pactBrokerUrl: process.env.PACT_BROKER_URL,
+                pactBrokerToken: process.env.PACT_BROKER_TOKEN
             }).then();
         })
     });
